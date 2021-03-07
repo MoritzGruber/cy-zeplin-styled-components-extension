@@ -1,0 +1,10 @@
+{
+  "packageName": "cy-zeplin-styled-components-extension",
+  "name": "Cyclus Styled Components",
+  "description": "Generates styled-components snippets from colors, text styles and layers.",
+  "version": "0.2.2",
+  "projectTypes": [
+    "web"
+  ],
+  "moduleURL": "./main.bd27323f.js"
+}

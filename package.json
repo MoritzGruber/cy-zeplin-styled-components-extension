@@ -1,0 +1,20 @@
+{
+  "name": "cy-zeplin-styled-components-extension",
+  "version": "0.2.2",
+  "description": "Generates styled-components snippets from colors, text styles and layers.",
+  "scripts": {
+    "start": "zem start",
+    "build": "zem build",
+    "clean": "zem clean",
+    "exec": "zem exec",
+    "publish": "zem publish"
+  },
+  "zeplin": {
+    "displayName": "Cyclus Styled Components",
+    "projectTypes": ["web"]
+  },
+  "dependencies": {
+    "zem": "^0.3.3",
+    "zeplin-extension-style-kit": "^1.0.0"
+  }
+}
