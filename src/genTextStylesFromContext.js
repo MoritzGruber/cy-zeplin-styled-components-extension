@@ -1,6 +1,8 @@
 
 const genTextStylesFromContext = (a) => {
-    const all = a._project.linkedStyleguide.textStyles.map(e => {
+    const textStyles = (a._project && a._project.textStyles && a._project.textStyles.length > 0) ? a._project.textStyles : (a._project.linkedStyleguide && a._project.linkedStyleguide.textStyles);
+
+    const all = textStyles.map(e => {
         const lines = [];
         lines.push(`font-size: ${e.fontSize}px;\n`)
         lines.push(`font-family: ${e.fontFamily};\n`)
@@ -36,7 +38,7 @@ const genTextStylesFromContext = (a) => {
             }
         }
         const name = e.name.replace("/", '').replace("/", '');
-        const code = `const CSS${name} = css\`\n${lines.join('')}\`;\n\n`
+        const code = `export const CSS${name} = css\`\n${lines.join('')}\`;\n\n`
         return {
             weightText: e.weightText,
             letterSpacing: e.letterSpacing,

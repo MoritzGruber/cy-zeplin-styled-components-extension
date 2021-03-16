@@ -61,7 +61,7 @@ const findTextStyleMatch = (defaultTextStyle, fontTheme) => {
   })
 
   if (!res) {
-     return undefined
+    return undefined
   }
 
   return {
@@ -88,7 +88,7 @@ export default function layer(context, selectedLayer) {
     declarations.forEach(p => layerRuleSet.addDeclaration(p))
   }
 
-  const variableMap = getVariableMap(project.colors.length > 0 ? project.colors : project.linkedStyleguide.colors)
+  const variableMap = getVariableMap(project.colors.length > 0 ? project.colors : ((project.colors && project.colors.length > 0 && project.colors ) || (project.linkedStyleguide && project.linkedStyleguide.colors)))
   const code = declarationsToString(layerRuleSet.declarations, variableMap, textStyleMatch)
 
   return {
